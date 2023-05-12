@@ -2,6 +2,7 @@ const API_KEY = `3265874a2c77ae4a04bb96236a642d2f`
 const form = document.querySelector("form")
 const weather=document.querySelector("#weather")
 const search=document.querySelector("#search")
+const button = document.querySelector("button")
 
 // const API ='https://api.openweathermap.org/data/2.5/weather? q=${city)&appid=${API_KEY}&units=metric'
 
@@ -41,3 +42,7 @@ form.addEventListener(
 )
 
 
+button.addEventListener('click',function(event){
+    getWeather(search.value);
+    event.preventDefault();
+})
